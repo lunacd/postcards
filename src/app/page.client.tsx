@@ -161,7 +161,11 @@ export default function HomeClient() {
       >
         <div className="postcard-container">
           <div className="w-full h-full overflow-hidden">
-            <img src={image} alt="Retrieved postcard image" className="image" />
+            <img
+              src={image.length > 0 ? image : undefined}
+              alt="Retrieved postcard image"
+              className="image"
+            />
           </div>
           <div className="overflow-y-auto">{text}</div>
         </div>
